@@ -24,7 +24,7 @@ const state = {
   },
 };
 
-const pathImages = "./src/assets/icons/";
+const pathImages = "./assets/icons/";
 
 const cardData = [
   {
@@ -57,6 +57,12 @@ async function getRandomIdCard() {
   const randomIndex = Math.floor(Math.random() * cardData.length);
 
   return cardData[randomIndex].id;
+}
+
+async function drawSelectCard(IdCard) {
+  state.cardsSprites.avatar.src = cardData[IdCard].img;
+  state.cardsSprites.name.innerText = cardData[IdCard].name;
+  state.cardsSprites.type.innerText = "Attribute : " + cardData[IdCard].type;
 }
 
 async function createCardImage(IdCard, fildSide) {
