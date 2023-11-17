@@ -87,9 +87,9 @@ async function ShowHiddenCardFieldsImage(value) {
 }
 
 async function hiddenCardDetails() {
-  state.cardsSprites.avatar = "";
-  state.cardsSprites.name = "";
-  state.cardsSprites.type = "";
+  state.cardsSprites.avatar.src = "";
+  state.cardsSprites.name.innerText = "";
+  state.cardsSprites.type.innerText = "";
 }
 
 async function drawButton(result) {
